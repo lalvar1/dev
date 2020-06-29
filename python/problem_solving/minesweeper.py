@@ -40,4 +40,3 @@ while sum([x.count('*') for x in grid]) < mines:
 
 print(*grid, sep='\n')
 
-

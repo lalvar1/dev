@@ -12,9 +12,9 @@ test_array = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 def rotate(array_list):
     aux_array = copy.deepcopy(array_list)
-    for total_array_index, array in enumerate(aux_array):
-        for array_index, num in enumerate(array):
-            array_list[array_index][-1-total_array_index] = num
+    for row_index, row in enumerate(aux_array):
+        for num_index, num in enumerate(row):
+            array_list[num_index][-1-row_index] = num
     return array_list
 
 

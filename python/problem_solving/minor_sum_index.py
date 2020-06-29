@@ -24,7 +24,7 @@ def two_sum(A, k):
     for i, v in enumerate(A):
         if k - v in diffs:
             return [diffs[k - v] + 1, i + 1]
-        elif v not in diffs:
+        elif v not in diffs:        # will not save one time, meaning the lowest index
             diffs[v] = i
     return []
 

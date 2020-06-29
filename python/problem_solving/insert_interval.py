@@ -1,5 +1,6 @@
 # insert interval, merge if an intersection exists
 
+
 def insert2(new_interval, intervals):
     new_min_arrays, i = [], 0
     for i, it in enumerate(intervals):
@@ -17,8 +18,6 @@ print(insert2([4,8],[[1,2],[3,5],[6,7],[8,10],[12,16]]))
 print(insert2([0, 0], [[1, 5]]))
 
 # nice case to apply recursion...
-
-
 
 
 
