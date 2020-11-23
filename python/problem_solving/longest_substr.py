@@ -23,8 +23,6 @@ def lengthOfLongestSubstring_quickest(s):
         dicts[value] = i
     return maxlength
 
-
-# THIS
 def lengthOfLongestSubstring_other(s):
     d = f = ""
     for i, val in enumerate(s):
@@ -42,13 +40,3 @@ def lengthOfLongestSubstring_other(s):
 print(lengthOfLongestSubstring("asjrgapa"))
 string = 'asjrgapa'
 
-largest = ''
-max_length = 0
-largets = set()
-for ch in string:
-    if ch in largest:
-        largest = largest[largest.index(ch)+1:]
-    largest += ch
-    largets |= {largest}
-    max_length = max(max_length, len(largest))
-print(max_length, max(largets, key=len))
