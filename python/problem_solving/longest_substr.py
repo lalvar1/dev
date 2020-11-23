@@ -52,26 +52,3 @@ for ch in string:
     largets |= {largest}
     max_length = max(max_length, len(largest))
 print(max_length, max(largets, key=len))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

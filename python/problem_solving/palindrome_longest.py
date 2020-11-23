@@ -106,7 +106,6 @@ def longest_pal(string):
 def brute_force(s):
     if s == "":
         return s
-    common = {}
     common = set()
     for i in range(len(s)):
         for j in range(1, len(s)+1):
@@ -133,19 +132,3 @@ for i in range(1, len(string)):
             low-=1
             high-=1
 print(string[start:start+max_length])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

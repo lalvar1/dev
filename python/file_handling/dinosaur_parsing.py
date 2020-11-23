@@ -15,8 +15,7 @@ def parse_csv(file, file2):
             if 'NAME' in line:
                 pass
             else:
-                name, stride_length, stance = line.\
-                    split(',')
+                name, stride_length, stance = line.split(',')
                 if stance.strip() == 'bipedal':
                     hash_map[name] = float(stride_length)
                     # hash_map[name]['stance'] = stance.strip()
@@ -26,7 +25,8 @@ def parse_csv(file, file2):
                 pass
             else:
                 name, leg_length, diet = line.split(',')
-                if name in hash_map.keys():
+                # if name in hash_map.keys():
+                if name in hash_map:
                     leg_length = float(leg_length)
                     # hash_map[name]['diet'] = diet.strip()
                     # hash_map[name]['length'] = leg_length
@@ -50,7 +50,7 @@ ordered_dinos = OrderedDict(sorted(hash_map.items(), key=lambda x: x[1], reverse
 print(*(list(ordered_dinos.items())), sep='\n')
 print('---------------------------------------------------------------------------------')
 print(hash_map.items())
-ordered_dinos = sorted(hash_map.items(), key=lambda x: x[1], reverse=False)
+ordered_dinos = sorted(hash_map.items(), key=lambda x: x[1])
 print(*ordered_dinos, sep='\n')
 
 # hash_map_list = [{dino: values['speed']} for dino, values in hash_map.items() if 'speed' in values]

@@ -39,4 +39,3 @@ while sum([x.count('*') for x in grid]) < mines:
     grid[random.randint(0,height-1)][random.randint(0,width-1)] = '*'
 
 print(*grid, sep='\n')
-

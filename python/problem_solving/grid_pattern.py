@@ -29,7 +29,6 @@ def grid_search(grid, pattern):
     return ret
 
 
-print(grid_search(grid3, pattern3))
+print(grid_search(grid, pattern))
 
 # map(lambda x: True if x in pattern else False, grid[4:])
-
